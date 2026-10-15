@@ -1,11 +1,81 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f5f3ee" />
-    <meta name="description" content="李想的视觉设计与数字创作作品集。" />
-    <title>李想 — 视觉设计师 / AI 创作者</title>
-  </head>
-  <body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <meta name="description" content="李想的视觉设计与数字创作作品集。">
+  <title>李想 — 视觉设计师 / AI 创作者</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero" id="home">
+    <video class="hero-video" id="hero-video" autoplay muted loop playsinline preload="metadata" poster="public/assets/work-image18.jpeg" aria-label="李想作品集视频背景">
+      <source src="public/assets/portfolio-reel.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <nav class="nav wrap" aria-label="主导航">
+      <a class="brand" href="#home">LX<span>.</span></a>
+      <div class="nav-links"><a href="#about">关于</a><a href="#work">作品</a><a href="#strengths">能力</a></div>
+      <a class="nav-contact" href="mailto:2020836983@qq.com">联系我 <span>↗</span></a>
+    </nav>
+    <div class="hero-content wrap">
+      <p class="eyebrow light"><i></i>视觉设计师 · AI 创作者 · 成都</p>
+      <h1>让想法<br><em>成为视觉。</em></h1>
+      <div class="hero-summary"><p>在设计与技术之间，寻找清晰、<br>真诚且有温度的表达。</p><a class="scroll-circle" href="#about" aria-label="向下浏览">↓</a></div>
+    </div>
+    <div class="hero-foot wrap"><span>独立创作 / 2024—26</span><span>向下探索　↓</span></div>
+    <button class="video-play" id="video-play" type="button" hidden>播放首页视频 <span>▶</span></button>
+    <p class="video-error" id="video-error" hidden>视频暂时无法加载，请检查网络后刷新页面。</p>
+  </header>
+
+  <main>
+    <section class="about section wrap" id="about">
+      <div class="section-label"><span>01 / 关于我</span><span>ABOUT</span></div>
+      <div class="about-grid">
+        <figure class="portrait"><img src="public/assets/resume-image1.jpeg" alt="李想个人照片"><figcaption>成都 · 中国<br>持续创作中</figcaption></figure>
+        <div class="about-copy">
+          <p class="eyebrow"><i></i>一点关于我</p>
+          <h2>你好，我是李想。<br><em>一个用视觉思考的人。</em></h2>
+          <p class="intro">就读于数字媒体技术专业，关注平面设计、数字产品与 AI 创作。擅长将想法整理成有秩序、有情绪的视觉语言，也乐于在新的工具与媒介中持续探索。</p>
+          <div class="facts">
+            <div><span>教育背景</span><strong>乐山师范学院 · 数字媒体技术</strong><small>2023 — 2027 · GPA 3.32 / 专业前 30%</small></div>
+            <div><span>实践经历</span><strong>平面设计 / 活动执行</strong><small>成都星合 · 2026 至今　／　成都熊猫 · 2025</small></div>
+          </div>
+          <div class="contact-row"><a href="mailto:2020836983@qq.com">2020836983@qq.com <span>↗</span></a><a href="tel:+8613688327179">+86 136 8832 7179</a></div>
+        </div>
+      </div>
+      <div class="stats"><div><strong>06<span>+</span></strong><small>作品主题</small></div><div><strong>03<span>年</span></strong><small>设计学习与实践</small></div><div><strong>多<span>维</span></strong><small>从平面到数字体验</small></div><p>保持好奇，持续<br>把想法做出来。</p></div>
+    </section>
+
+    <section class="work section wrap" id="work">
+      <div class="section-label"><span>02 / 精选项目</span><span>SELECTED WORKS · 2024—26</span></div>
+      <div class="work-heading"><h2>一些认真做过的<br><em>视觉练习。</em></h2><p>平面、界面与数字内容。<br>每个项目都是一次新的观察。</p></div>
+      <div class="project-grid">
+        <article class="project"><a href="public/assets/work-image18.jpeg" target="_blank" rel="noreferrer"><div class="project-image"><img src="public/assets/work-image18.jpeg" alt="棱镜艺术中心视觉海报" loading="lazy"><span>↗</span></div><div class="project-meta"><span>01　/　视觉传达 · 展览海报</span><span>2025</span></div><h3>城市与文化的视觉切片</h3></a></article>
+        <article class="project"><a href="public/assets/work-image9.jpeg" target="_blank" rel="noreferrer"><div class="project-image"><img src="public/assets/work-image9.jpeg" alt="春分花植生活方式 UI 设计" loading="lazy"><span>↗</span></div><div class="project-meta"><span>02　/　UI / UX · 概念设计</span><span>2025</span></div><h3>春分 — 花植生活方式</h3></a></article>
+        <article class="project"><a href="public/assets/work-image10.jpeg" target="_blank" rel="noreferrer"><div class="project-image"><img src="public/assets/work-image10.jpeg" alt="花植生活方式界面设计" loading="lazy"><span>↗</span></div><div class="project-meta"><span>03　/　数字产品 · 界面设计</span><span>2025</span></div><h3>让日常多一点自然</h3></a></article>
+        <article class="project"><a href="public/assets/work-image19.jpeg" target="_blank" rel="noreferrer"><div class="project-image"><img src="public/assets/work-image19.jpeg" alt="棱镜艺术中心展览海报" loading="lazy"><span>↗</span></div><div class="project-meta"><span>04　/　视觉系统 · 展览海报</span><span>2024</span></div><h3>棱镜艺术中心</h3></a></article>
+        <article class="project"><a href="public/assets/work-image6.png" target="_blank" rel="noreferrer"><div class="project-image"><img src="public/assets/work-image6.png" alt="数字主题视觉设计" loading="lazy"><span>↗</span></div><div class="project-meta"><span>05　/　视觉系统 · 主题设计</span><span>2024</span></div><h3>夜色中的数字漫游</h3></a></article>
+        <article class="project"><a href="public/assets/work-image1.jpeg" target="_blank" rel="noreferrer"><div class="project-image"><img src="public/assets/work-image1.jpeg" alt="人工智能主题宣传折页" loading="lazy"><span>↗</span></div><div class="project-meta"><span>06　/　品牌传播 · 宣传物料</span><span>2024</span></div><h3>人工智能与未来想象</h3></a></article>
+      </div>
+      <p class="work-note">作品图片来自个人作品集材料 · 点击卡片可查看原图</p>
+    </section>
+
+    <section class="strengths section wrap" id="strengths">
+      <div class="section-label"><span>03 / 我的方式</span><span>WHAT I BRING</span></div>
+      <div class="strength-heading"><p class="eyebrow"><i></i>能力与习惯</p><h2>从一个好问题，<br><em>开始好的设计。</em></h2></div>
+      <div class="skill-grid">
+        <article><span class="skill-no">01 <b>✳</b></span><h3>视觉表达</h3><p class="skill-tag">色彩、版式与图形语言</p><p>将信息梳理成清晰、有记忆点的平面视觉。</p></article>
+        <article><span class="skill-no">02 <b>✳</b></span><h3>数字体验</h3><p class="skill-tag">界面 · 动效 · 影像</p><p>理解从界面布局到动态叙事的多种媒介表达。</p></article>
+        <article><span class="skill-no">03 <b>✳</b></span><h3>AI 创作</h3><p class="skill-tag">生成式工具 · 创意探索</p><p>把 AI 工具融入灵感探索与视觉制作流程。</p></article>
+        <article><span class="skill-no">04 <b>✳</b></span><h3>协作落地</h3><p class="skill-tag">沟通 · 执行 · 细节</p><p>有活动与实习执行经验，关注交付质量与团队协作。</p></article>
+      </div>
+      <div class="tools"><span>常用工具</span><p>Photoshop　·　Illustrator　·　Figma　·　After Effects　·　Premiere　·　C4D　·　AI 工具</p></div>
+    </section>
+  </main>
+
+  <footer class="contact section" id="contact"><div class="contact-inner wrap"><div class="section-label"><span>04 / 保持联系</span><span>LET’S MAKE SOMETHING</span></div><p class="eyebrow light"><i></i>欢迎交流合作与实习机会</p><h2>下一个好想法，<br><em>一起完成。</em></h2><a class="email-button" href="mailto:2020836983@qq.com">给我写封邮件 <span>↗</span></a><div class="footer-bottom"><a href="tel:+8613688327179">+86 136 8832 7179</a><span>成都 · 中国</span><span>© 2026 李想</span><a href="#home">回到顶部 ↑</a></div></div><span class="contact-mark" aria-hidden="true">LX</span></footer>
+</body>
 </html>
