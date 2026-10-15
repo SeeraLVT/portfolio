@@ -1,4 +1,4 @@
-name: Deploy portfolio to GitHub Pages
+name: Deploy static portfolio to GitHub Pages
 
 on:
   push:
@@ -20,19 +20,15 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - name: Install dependencies
-        run: npm ci
-      - name: Build site
-        run: npm run build
+      - name: Prepare static site
+        run: |
+          mkdir -p _site
+          cp index.html style.css script.js _site/
+          cp -R public _site/public
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: dist
+          path: _site
 
   deploy:
     environment:
